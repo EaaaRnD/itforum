@@ -367,7 +367,7 @@ function displayEvents() {
 
 	    var participating = isParticipating(currEvent.eventId);
 	    var favorite = currEvent.favorite==true;
-	    var icon = participating?"check":(favorite?"star":"question");
+	    var icon = participating?"check":(favorite?"star":"ban5");
 	    var theme = participating?"b":(favorite?"c":"a");
 
 	    $('#eventList').append("<li data-theme='"+theme+"' data-icon='"+icon+"' data-id='" + currEvent.eventId + "' ><a href='#pageDetailEvent'><img height=\"100%\" src='" + imgSrc + "'><p style=\"margin: .3em 0;\"><strong>" + currEvent.title + "</strong></p><p>" + currEvent.subtitle + "</p><p>" + currEvent.date + "</p><p class='ui-li-aside'><strong id='" + currEvent.eventId + "'></strong></p></a><a href='javascript:toggleFavoriteEvent("+currEvent.eventId+")' data-theme='"+theme+"' data-rel='popup' data-position-to='window' data-transition='pop'>Stjernemarkering</a></li>");
@@ -474,7 +474,7 @@ function displayNetworkingParticipants() {
 
 	    var favorite = participantsArray[i].favorite==true;
 	    var theme = favorite?"c":"a";
-	    var icon = favorite?"star":"star-o";
+	    var icon = favorite?"star":"ban5";
 
 	    $('#NetworkingParticipantsList').append("<li data-theme='"+theme+"' data-icon='"+icon+"' data-id='" + participantsArray[i].id + "' ><a href='#pageParticipantsDetail'><img src='"+imgSrc+"'><p><strong>" + participantsArray[i].firstname + " " + participantsArray[i].lastname + "</strong></p><p> " + participantsArray[i].title + "</p><p>" + participantsArray[i].company + "</p><a href='javascript:setFavoriteParticipant("+participantsArray[i].id+","+!(participantsArray[i].favorite)+",displayNetworkingParticipants)' data-theme='"+theme+"' data-rel='popup' data-position-to='window' data-transition='pop'>Stjernemarkering</a></li>");
 
