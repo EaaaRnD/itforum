@@ -1,0 +1,129 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"android-package\" value=\"org.jboss.aerogear.cordova.push.PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Directions\"><param name=\"android-package\" value=\"uk.co.ilee.directions.Directions\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Sms\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.sms.Sms\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission android:name=\"com.example.itforum.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.example.itforum.permission.C2D_MESSAGE\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:name=\"org.jboss.aerogear.cordova.push.PushHandlerActivity\" xmlns:android=\"http://schemas.android.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"org.jboss.aerogear.android.unifiedpush.AeroGearGCMMessageReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\" xmlns:android=\"http://schemas.android.com/apk/res/android\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><category android:name=\"com.example.itforum\" /></intent-filter><meta-data android:name=\"DEFAULT_MESSAGE_HANDLER_KEY\" android:value=\"org.jboss.aerogear.cordova.push.NotificationMessageHandler\" /></receiver>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "org.jboss.aerogear.cordova.push": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "uk.co.ilee.directions": {
+            "PACKAGE_NAME": "com.example.itforum"
+        },
+        "org.apache.cordova.plugin.sms": {
+            "PACKAGE_NAME": "com.example.itforum"
+        }
+    },
+    "dependent_plugins": {}
+}

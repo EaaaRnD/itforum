@@ -1,0 +1,44 @@
+.image{
+	display: inline-block;
+	position: relative;
+	width: 30%;
+	text-align: center;
+	
+}
+
+body{
+	
+	margin: 0;
+}
+
+#loginform{
+	
+	letter-spacing: 0;	
+}
+
+.custom-btn { 
+	
+
+	}
+.ui-btn-active 
+{ 
+    color: #2F3E46 !important; 
+    background: none !important; 
+    background-color: #eee !important; 
+    text-shadow: 0 /*{a-bup-shadow-x}*/ 
+                 1px /*{a-bup-shadow-y}*/ 
+                 0 /*{a-bup-shadow-radius}*/ 
+                 #ffffff /*{a-bup-shadow-color}*/;  
+}
+
+.custom-label-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+    text-indent: -3.4em;
+}
+.custom-label-flipswitch.ui-flipswitch .ui-flipswitch-off {
+    text-indent: 0.5em;
+}
+
+.ui-listview > li p {
+	margin: .3em 0;
+}
+

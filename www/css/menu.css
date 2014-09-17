@@ -1,0 +1,40 @@
+
+
+.ui-grid-a img {
+	width: 70%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+   	border-color: red;
+   	border: 1px; 
+	
+}
+
+.ui-grid-a div {
+	margin-top: 5%;
+}
+
+
+.imgCaption {
+	width: 100%;
+	text-align: center;
+	font-size: 100%;
+	
+}
+
+#content{
+	margin: 0%;
+	border: 0%;
+	
+}
+
+#logo{
+	
+	
+	margin: 0%;	
+	border: 0%;
+	float:left;
+	display:inline;
+	width:100%;
+}

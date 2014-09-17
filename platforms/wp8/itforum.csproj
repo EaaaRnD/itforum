@@ -1,0 +1,3361 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProductVersion>10.0.20506</ProductVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{3677C1B7-D68B-4CF9-BF8A-E869D437A6DF}</ProjectGuid>
+        <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>com.example.itforum</RootNamespace>
+        <AssemblyName>com.example.itforum</AssemblyName>
+        <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+        <SilverlightVersion>
+        </SilverlightVersion>
+        <TargetFrameworkProfile>
+        </TargetFrameworkProfile>
+        <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+        <SilverlightApplication>true</SilverlightApplication>
+        <SupportedCultures>en-US</SupportedCultures>
+        <XapOutputs>true</XapOutputs>
+        <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+        <XapFilename>CordovaAppProj_$(Configuration)_$(Platform).xap</XapFilename>
+        <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+        <SilverlightAppEntry>com.example.itforum.App</SilverlightAppEntry>
+        <ValidateXaml>true</ValidateXaml>
+        <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+        <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+        <BackgroundAgentType />
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>Bin\Debug</OutputPath>
+        <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;WP8</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <NoConfig>true</NoConfig>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>Bin\Release</OutputPath>
+        <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;WP8</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <NoConfig>true</NoConfig>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>Bin\x86\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>full</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+        <OutputPath>Bin\x86\Release</OutputPath>
+        <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <Optimize>true</Optimize>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>pdbonly</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>Bin\ARM\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>full</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Prefer32Bit>false</Prefer32Bit>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+        <OutputPath>Bin\ARM\Release</OutputPath>
+        <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+        <Optimize>true</Optimize>
+        <NoStdLib>true</NoStdLib>
+        <DebugType>pdbonly</DebugType>
+        <PlatformTarget>
+        </PlatformTarget>
+        <ErrorReport>prompt</ErrorReport>
+        <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+        <Prefer32Bit>false</Prefer32Bit>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="App.xaml.cs">
+            <DependentUpon>App.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="cordovalib\Commands\BaseCommand.cs" />
+        <Compile Include="cordovalib\JSON\JsonHelper.cs" />
+        <Compile Include="cordovalib\BrowserMouseHelper.cs" />
+        <Compile Include="cordovalib\CommandFactory.cs" />
+        <Compile Include="cordovalib\ConfigHandler.cs" />
+        <Compile Include="cordovalib\ConsoleHelper.cs" />
+        <Compile Include="cordovalib\CordovaCommandCall.cs" />
+        <Compile Include="cordovalib\CordovaView.xaml.cs">
+            <DependentUpon>CordovaView.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="cordovalib\IBrowserDecorator.cs" />
+        <Compile Include="cordovalib\ImageExifHelper.cs" />
+        <Compile Include="cordovalib\MimeTypeMapper.cs" />
+        <Compile Include="cordovalib\NativeExecution.cs" />
+        <Compile Include="cordovalib\OrientationHelper.cs" />
+        <Compile Include="cordovalib\PluginResult.cs" />
+        <Compile Include="cordovalib\ScriptCallback.cs" />
+        <Compile Include="cordovalib\XHRHelper.cs" />
+        <Compile Include="MainPage.xaml.cs">
+            <DependentUpon>MainPage.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Page Include="Plugins\org.apache.cordova.dialogs\NotificationBox.xaml">
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
+    <ItemGroup>
+        <ApplicationDefinition Include="App.xaml">
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </ApplicationDefinition>
+        <Page Include="cordovalib\CordovaView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Include="MainPage.xaml">
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="config.xml" />
+        <Content Include="Images\appbar.back.rest.png" />
+        <Content Include="Images\appbar.close.rest.png" />
+        <Content Include="Images\appbar.feature.video.rest.png" />
+        <Content Include="Images\appbar.next.rest.png" />
+        <Content Include="Images\appbar.save.rest.png" />
+        <Content Include="Images\appbar.stop.rest.png" />
+        <None Include="cordova\lib\build.js" />
+        <None Include="cordova\lib\clean.js" />
+        <None Include="cordova\lib\deploy.js" />
+        <None Include="cordova\lib\log.js" />
+        <None Include="cordova\lib\target-list.js" />
+        <None Include="cordova\build.bat" />
+        <None Include="cordova\clean.bat" />
+        <None Include="cordova\lib\install-device.bat" />
+        <None Include="cordova\lib\install-emulator.bat" />
+        <None Include="cordova\lib\list-devices.bat" />
+        <None Include="cordova\lib\list-emulator-images.bat" />
+        <None Include="cordova\lib\list-started-emulators.bat" />
+        <None Include="cordova\lib\start-emulator.bat" />
+        <None Include="cordova\log.bat" />
+        <None Include="cordova\run.bat" />
+        <None Include="cordova\version.bat" />
+        <None Include="VERSION" />
+        <None Include="Properties\AppManifest.xml">
+            <SubType>Designer</SubType>
+        </None>
+        <None Include="Properties\WMAppManifest.xml">
+            <SubType>Designer</SubType>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="ApplicationIcon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Background.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="SplashScreenImage.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <WCFMetadata Include="Service References\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+    <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+    <ProjectExtensions />
+    <PropertyGroup>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PostBuildEvent>
+        </PostBuildEvent>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.device\Device.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.dialogs\Notification.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.dialogs\NotificationBox.xaml.cs">
+            <DependentUpon>NotificationBox.xaml</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup />
+    <ItemGroup>
+        <Content Include="Plugins\org.apache.cordova.dialogs\notification-beep.wav" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.inappbrowser\InAppBrowser.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.network-information\NetworkStatus.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.splashscreen\SplashScreen.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\uk.co.ilee.directions\Directions.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\org.apache.cordova.plugin.sms\Sms.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/README.md" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/cordova.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/cordova_plugins.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/home.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/menu.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/.gitignore" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/become_member_icon_alternative.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/cal_icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/facebook-default-no-profile-pic.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgArr.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgBeMem.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgCon.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgLog.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgNews.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgmem.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgnetw.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/imgprofile.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/it_forum_top.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/itforum-logo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/letter_icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/lock_icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/people_icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/person_icon.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/person_icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/phone_icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/user-group-icon.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/detailpages.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/detailpages.js~" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/localDBParticipants.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/localDatabase.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/login.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/networking.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/remoteDatabase.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/serviceOnMobile.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/util.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/.DS_Store" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/cryptoJS-3.1.2/sha1.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/fastclick.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/jqm-icon-pack-fa-builder.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/jqm-icon-pack-fa.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/jqm-icon-pack-fa.scss" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/00.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/01.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/02.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/03.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/04.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/05.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/06.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/07.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/08.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/09.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/adjust.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/adn.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/align-center.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/align-justify.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/align-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/align-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/ambulance.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/anchor.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/android.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-double-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-double-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-double-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-double-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/angle-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/apple.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/archive.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-o-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-o-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-o-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-o-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-circle-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrow-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrows-alt.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrows-h.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrows-v.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/arrows.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/asterisk.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/backward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/ban.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bar-chart-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/barcode.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bars.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/beer.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bell-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bell.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bitbucket-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bitbucket.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bitcoin.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bold.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bolt.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/book.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bookmark-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bookmark.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/briefcase.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bug.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/building-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bullhorn.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/bullseye.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/calendar-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/calendar.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/camera-retro.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/camera.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/caret-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/caret-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/caret-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/caret-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/certificate.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/check-circle-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/check-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/check-square-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/check-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/check.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-circle-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-circle-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-circle-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-circle-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/chevron-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/circle-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/clipboard.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/clock-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/cloud-download.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/cloud-upload.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/cloud.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/code-fork.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/code.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/coffee.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/columns.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/comment-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/comment.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/comments-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/comments.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/compass.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/compress.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/credit-card.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/crop.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/crosshairs.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/css3.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/cutlery.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/dashboard.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/dedent.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/desktop.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/dot-circle-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/download.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/dribbble.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/dropbox.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/edit.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/eject.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/ellipsis-h.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/ellipsis-v.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/envelope-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/envelope.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/eraser.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/euro.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/exchange.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/exclamation-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/exclamation-triangle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/exclamation.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/expand.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/external-link-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/external-link.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/external-link3.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/eye-slash.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/eye.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/facebook-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/facebook.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/facebook3.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/fast-backward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/fast-forward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/female.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/fighter-jet.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/file-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/file-text-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/file-text.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/file.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/files-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/film.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/filter.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/fire-extinguisher.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/fire.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/flag-checkered.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/flag-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/flag.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/flask.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/flickr.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/folder-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/folder-open-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/folder-open.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/folder.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/font.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/forward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/foursquare.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/frown-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gamepad.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gavel.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gbp.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gear.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gears.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gift.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/github-alt.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/github-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/github.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/gittip.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/glass.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/globe.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/globe3.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/google-plus-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/google-plus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/group.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/h-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/hand-o-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/hand-o-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/hand-o-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/hand-o-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/hdd-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/headphones.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/heart-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/heart.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/home.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/hospital-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/html5.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i00.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i01.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i02.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i03.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i04.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i05.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i06.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i07.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i08.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/i09.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/inbox.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/indent.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/info-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/info.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/inr.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/instagram.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/italic.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/jpy.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/key.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/keyboard-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/krw.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/laptop.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/leaf.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/lemon-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/level-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/level-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/lightbulb-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/link.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/linkedin-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/linkedin.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/linux.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/list-alt.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/list-ol.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/list-ul.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/list.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/location-arrow.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/lock.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/long-arrow-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/long-arrow-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/long-arrow-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/long-arrow-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/magic.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/magnet.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/mail-forward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/mail-reply-all.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/mail-reply.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/male.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/map-marker.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/maxcdn.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/medkit.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/meh-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/microphone-slash.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/microphone.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/minus-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/minus-square-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/minus-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/minus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/mobile.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/money.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/moon-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/music.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/pagelines.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/paperclip.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/pause.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/pencil-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/pencil.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/phone-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/phone.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/picture-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/pinterest-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/pinterest.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/plane.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/play-circle-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/play-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/play.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/plus-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/plus-square-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/plus-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/plus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/power-off.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/print.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/puzzle-piece.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/qrcode.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/question-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/question.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/quote-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/quote-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/random.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/refresh.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/retweet.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/road.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/rocket.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/rotate-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/rss-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/rss.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/rub.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/save.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/scissors.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/search-minus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/search-plus.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/search.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/share-square-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/share-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/shield.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/shopping-cart.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sign-in.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sign-out.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/signal.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sitemap.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/skype.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/smile-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-alpha-asc.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-alpha-desc.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-amount-asc.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-amount-desc.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-numeric-asc.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-numeric-desc.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sort.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/spinner.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/square-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/stack-exchange.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/stack-overflow.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/star-half-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/star-half.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/star-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/star.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/step-backward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/step-forward.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/stethoscope.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/stop.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/strikethrough.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/subscript.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/suitcase.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/sun-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/superscript.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/table.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/tablet.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/tag.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/tags.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/terminal.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/text-height.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/text-width.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/th-large.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/th-list.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/th.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/thumb-tack.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/thumbs-o-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/thumbs-o-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/thumbs-thumb.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/thumbs-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/ticket.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/times-circle-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/times-circle.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/times.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/tint.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/toggle-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/toggle-left.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/toggle-right.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/toggle-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/trash-o.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/trello.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/truck.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/tumblr-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/tumblr.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/turkish-lira.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/twitter-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/twitter.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/umbrella.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/underline.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/undo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/unlink.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/unlock-alt.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/upload.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/usd.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/user-md.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/user.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/video-camera.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/vimeo-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/vk.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/vk3.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/volume-down.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/volume-off.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/volume-up.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/weibo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/wheelchair.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/windows.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/wrench.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/xing-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/xing.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/youtube-play.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/youtube-square.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jQuery-Mobile-Icon-Pack-dist/png/youtube.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/CREDITS.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/GPL-LICENSE.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/MIT-LICENSE.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydata-vsdoc.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydata.d.ts" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydata.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydata.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/angular.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/angular.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/deferred.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/deferred.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/errorhandler.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/errorhandler.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/formBinder.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/formBinder.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/handlebars.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/handlebars.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/inMemory.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/inMemory.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/jaydata.mscrm.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/jaydata.mscrm.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/jaydata.mscrm.server.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/jaydata.mscrm.server.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/kendo.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/kendo.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/knockout.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/knockout.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/qDeferred.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/qDeferred.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/sencha.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/sencha.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/template.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/template.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/validate.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydatamodules/validate.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/FacebookProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/FacebookProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/InMemoryProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/InMemoryProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/IndexedDbProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/IndexedDbProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/MongoDbProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/MongoDbProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/SqLiteProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/SqLiteProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/StormProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/StormProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/WebApiProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/WebApiProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/YQLProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/YQLProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/oDataProvider.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jaydata-1.3.6/jaydataproviders/oDataProvider.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery-1.11.0/jquery-1.11.0.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/Thumbs.db" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/ajax-loader.gif" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/action-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/action-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/alert-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/alert-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-d-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-d-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-d-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-d-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-d-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-d-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-u-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-u-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-u-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-u-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-u-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/arrow-u-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/audio-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/audio-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/back-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/back-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/bars-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/bars-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/bullets-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/bullets-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/calendar-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/calendar-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/camera-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/camera-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-d-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-d-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-u-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/carat-u-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/check-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/check-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/clock-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/clock-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/cloud-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/cloud-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/comment-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/comment-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/delete-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/delete-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/edit-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/edit-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/eye-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/eye-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/forbidden-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/forbidden-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/forward-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/forward-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/gear-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/gear-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/grid-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/grid-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/heart-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/heart-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/home-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/home-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/info-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/info-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/location-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/location-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/lock-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/lock-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/mail-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/mail-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/minus-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/minus-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/navigation-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/navigation-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/phone-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/phone-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/plus-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/plus-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/power-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/power-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/recycle-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/recycle-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/refresh-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/refresh-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/search-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/search-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/shop-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/shop-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/star-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/star-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/tag-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/tag-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/user-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/user-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/video-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-png/video-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/action-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/action-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/alert-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/alert-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-d-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-d-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-d-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-d-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-d-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-d-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-u-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-u-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-u-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-u-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-u-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/arrow-u-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/audio-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/audio-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/back-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/back-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/bars-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/bars-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/bullets-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/bullets-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/calendar-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/calendar-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/camera-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/camera-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-d-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-d-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-u-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/carat-u-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/check-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/check-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/clock-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/clock-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/cloud-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/cloud-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/comment-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/comment-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/delete-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/delete-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/edit-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/edit-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/eye-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/eye-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/forbidden-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/forbidden-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/forward-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/forward-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/gear-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/gear-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/grid-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/grid-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/heart-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/heart-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/home-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/home-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/info-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/info-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/location-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/location-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/lock-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/lock-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/mail-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/mail-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/minus-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/minus-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/navigation-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/navigation-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/phone-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/phone-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/plus-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/plus-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/power-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/power-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/recycle-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/recycle-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/refresh-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/refresh-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/search-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/search-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/shop-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/shop-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/star-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/star-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/tag-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/tag-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/user-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/user-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/video-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/images/icons-svg/video-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.map" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.external-png-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.external-png-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.icons-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.icons-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.inline-png-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.inline-png-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.inline-svg-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.inline-svg-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.structure-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.theme-1.4.2.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.2/jquery.mobile.theme-1.4.2.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/.DS_Store" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/ajax-loader.gif" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/action-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/action-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/alert-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/alert-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-d-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-d-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-d-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-d-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-d-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-d-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-u-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-u-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-u-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-u-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-u-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/arrow-u-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/audio-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/audio-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/back-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/back-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/bars-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/bars-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/bullets-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/bullets-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/calendar-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/calendar-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/camera-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/camera-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-d-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-d-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-u-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/carat-u-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/check-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/check-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/clock-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/clock-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/cloud-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/cloud-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/comment-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/comment-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/delete-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/delete-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/edit-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/edit-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/eye-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/eye-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/forbidden-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/forbidden-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/forward-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/forward-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/gear-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/gear-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/grid-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/grid-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/heart-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/heart-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/home-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/home-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/info-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/info-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/location-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/location-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/lock-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/lock-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/mail-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/mail-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/minus-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/minus-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/navigation-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/navigation-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/phone-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/phone-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/plus-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/plus-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/power-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/power-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/recycle-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/recycle-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/refresh-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/refresh-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/search-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/search-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/shop-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/shop-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/star-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/star-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/tag-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/tag-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/user-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/user-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/video-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-png/video-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/action-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/action-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/alert-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/alert-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-d-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-d-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-d-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-d-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-d-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-d-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-u-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-u-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-u-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-u-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-u-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/arrow-u-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/audio-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/audio-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/back-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/back-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/bars-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/bars-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/bullets-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/bullets-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/calendar-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/calendar-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/camera-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/camera-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-d-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-d-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-l-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-l-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-r-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-r-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-u-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/carat-u-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/check-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/check-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/clock-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/clock-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/cloud-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/cloud-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/comment-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/comment-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/delete-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/delete-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/edit-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/edit-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/eye-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/eye-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/forbidden-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/forbidden-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/forward-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/forward-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/gear-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/gear-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/grid-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/grid-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/heart-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/heart-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/home-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/home-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/info-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/info-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/location-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/location-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/lock-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/lock-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/mail-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/mail-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/minus-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/minus-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/navigation-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/navigation-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/phone-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/phone-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/plus-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/plus-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/power-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/power-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/recycle-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/recycle-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/refresh-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/refresh-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/search-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/search-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/shop-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/shop-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/star-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/star-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/tag-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/tag-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/user-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/user-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/video-black.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/images/icons-svg/video-white.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile-1.4.4.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile-1.4.4.min.map" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.external-png-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.external-png-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.icons-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.icons-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.inline-png-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.inline-png-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.inline-svg-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.inline-svg-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.structure-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.structure-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.theme-1.4.4.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile-1.4.4/jquery.mobile.theme-1.4.4.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile.custom/jquery.mobile.custom.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile.custom/jquery.mobile.custom.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile.custom/jquery.mobile.custom.structure.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile.custom/jquery.mobile.custom.structure.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile.custom/jquery.mobile.custom.theme.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/lib/jquery.mobile.custom/jquery.mobile.custom.theme.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.device/www/device.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.dialogs/www/notification.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.network-information/www/Connection.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.network-information/www/network.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.plugin.sms/www/sms.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.jboss.aerogear.cordova.push/www/aerogear-push.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/uk.co.ilee.directions/www/directions.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/ajax-loader.gif" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/action-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/action-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/alert-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/alert-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-d-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-d-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-d-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-d-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-d-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-d-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-u-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-u-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-u-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-u-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-u-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/arrow-u-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/audio-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/audio-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/back-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/back-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/bars-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/bars-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/bullets-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/bullets-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/calendar-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/calendar-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/camera-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/camera-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-d-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-d-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-l-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-l-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-r-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-r-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-u-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/carat-u-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/check-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/check-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/clock-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/clock-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/cloud-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/cloud-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/comment-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/comment-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/delete-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/delete-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/edit-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/edit-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/eye-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/eye-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/forbidden-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/forbidden-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/forward-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/forward-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/gear-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/gear-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/grid-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/grid-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/heart-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/heart-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/home-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/home-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/info-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/info-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/location-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/location-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/lock-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/lock-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/mail-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/mail-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/minus-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/minus-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/navigation-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/navigation-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/phone-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/phone-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/plus-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/plus-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/power-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/power-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/recycle-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/recycle-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/refresh-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/refresh-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/search-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/search-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/shop-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/shop-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/star-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/star-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/tag-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/tag-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/user-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/user-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/video-black.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/images/icons-png/video-white.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/itforum.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/itforum.min.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/themes/jquery.mobile.icons.min.css" />
+    </ItemGroup>
+</Project>

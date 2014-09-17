@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:6
+-keep class com.example.itforum.itforum { <init>(...); }
+
+# view AndroidManifest.xml #generated:13
+-keep class org.jboss.aerogear.android.unifiedpush.AeroGearGCMMessageReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:12
+-keep class org.jboss.aerogear.cordova.push.PushHandlerActivity { <init>(...); }
+

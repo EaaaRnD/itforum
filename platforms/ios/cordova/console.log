@@ -1,0 +1,123 @@
+2014-06-24 09:59:51.569 itforum[838:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-24 09:59:51.589 itforum[838:70b] Unlimited access to network resources
+2014-06-24 09:59:51.592 itforum[838:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-24 09:59:51.834 itforum[838:70b] [CDVTimer][splashscreen] 84.752023ms
+2014-06-24 09:59:51.834 itforum[838:70b] [CDVTimer][TotalPluginStartup] 85.096002ms
+2014-06-24 09:59:51.839 itforum[838:70b] active
+2014-06-24 09:59:51.915 itforum[838:70b] Resetting plugins due to page load.
+2014-06-24 09:59:52.172 itforum[838:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/4094AEC3-7183-4D2E-992B-7CB61B5C26E6/itforum.app/www/index.html
+2014-06-24 10:00:18.628 itforum[838:70b] register
+2014-06-24 10:00:40.443 itforum[838:70b] active
+2014-06-24 10:00:47.861 itforum[838:70b] active
+2014-06-24 10:03:32.960 itforum[1286:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-24 10:03:32.968 itforum[1286:70b] Unlimited access to network resources
+2014-06-24 10:03:32.971 itforum[1286:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-24 10:03:32.993 itforum[1286:70b] [CDVTimer][splashscreen] 6.980956ms
+2014-06-24 10:03:32.993 itforum[1286:70b] [CDVTimer][TotalPluginStartup] 7.345974ms
+2014-06-24 10:03:33.001 itforum[1286:70b] active
+2014-06-24 10:03:33.071 itforum[1286:70b] Resetting plugins due to page load.
+2014-06-24 10:03:33.267 itforum[1286:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/4094AEC3-7183-4D2E-992B-7CB61B5C26E6/itforum.app/www/index.html
+2014-06-24 10:04:26.562 itforum[1286:70b] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2014-06-24 10:04:26.567 itforum[1286:70b] THREAD WARNING: ['InAppBrowser'] took '39.582031' ms. Plugin should use a background thread.
+2014-06-24 10:05:48.338 itforum[1286:70b] register
+2014-06-24 10:14:26.269 itforum[1286:70b] active
+2014-06-24 10:20:44.556 itforum[1286:70b] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2014-06-24 10:24:39.724 itforum[1286:70b] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2014-06-25 04:42:52.166 itforum[881:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-25 04:42:52.188 itforum[881:70b] Unlimited access to network resources
+2014-06-25 04:42:52.191 itforum[881:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-25 04:42:52.406 itforum[881:70b] [CDVTimer][splashscreen] 93.215048ms
+2014-06-25 04:42:52.406 itforum[881:70b] [CDVTimer][TotalPluginStartup] 93.605042ms
+2014-06-25 04:42:52.412 itforum[881:70b] active
+2014-06-25 04:42:52.506 itforum[881:70b] Resetting plugins due to page load.
+2014-06-25 04:42:52.921 itforum[881:70b] register
+2014-06-25 04:42:53.380 itforum[881:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/4094AEC3-7183-4D2E-992B-7CB61B5C26E6/itforum.app/www/index.html#pageMenu
+2014-06-25 04:44:39.859 itforum[1309:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-25 04:44:39.866 itforum[1309:70b] Unlimited access to network resources
+2014-06-25 04:44:39.868 itforum[1309:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-25 04:44:39.885 itforum[1309:70b] [CDVTimer][splashscreen] 6.047964ms
+2014-06-25 04:44:39.886 itforum[1309:70b] [CDVTimer][TotalPluginStartup] 6.479025ms
+2014-06-25 04:44:39.892 itforum[1309:70b] active
+2014-06-25 04:44:39.957 itforum[1309:70b] Resetting plugins due to page load.
+2014-06-25 04:44:40.118 itforum[1309:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/D89BB770-CA0B-4224-A4D7-F6E80595A5BC/itforum.app/www/index.html
+2014-06-25 04:46:11.586 itforum[1309:70b] register
+2014-06-25 05:52:38.001 itforum[1867:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-25 05:52:38.007 itforum[1867:70b] Unlimited access to network resources
+2014-06-25 05:52:38.008 itforum[1867:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-25 05:52:38.025 itforum[1867:70b] [CDVTimer][splashscreen] 5.931020ms
+2014-06-25 05:52:38.025 itforum[1867:70b] [CDVTimer][TotalPluginStartup] 6.344020ms
+2014-06-25 05:52:38.029 itforum[1867:70b] active
+2014-06-25 05:52:38.058 itforum[1867:70b] Resetting plugins due to page load.
+2014-06-25 05:52:38.211 itforum[1867:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/D89BB770-CA0B-4224-A4D7-F6E80595A5BC/itforum.app/www/index.html
+2014-06-25 05:52:48.851 itforum[2303:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-25 05:52:48.856 itforum[2303:70b] Unlimited access to network resources
+2014-06-25 05:52:48.859 itforum[2303:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-25 05:52:48.877 itforum[2303:70b] [CDVTimer][splashscreen] 5.581021ms
+2014-06-25 05:52:48.878 itforum[2303:70b] [CDVTimer][TotalPluginStartup] 5.990982ms
+2014-06-25 05:52:48.881 itforum[2303:70b] active
+2014-06-25 05:52:48.957 itforum[2303:70b] Resetting plugins due to page load.
+2014-06-25 05:52:49.149 itforum[2303:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/D89BB770-CA0B-4224-A4D7-F6E80595A5BC/itforum.app/www/index.html
+2014-06-25 05:54:45.130 itforum[2721:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-25 05:54:45.136 itforum[2721:70b] Unlimited access to network resources
+2014-06-25 05:54:45.137 itforum[2721:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-25 05:54:45.154 itforum[2721:70b] [CDVTimer][splashscreen] 5.806029ms
+2014-06-25 05:54:45.154 itforum[2721:70b] [CDVTimer][TotalPluginStartup] 6.290972ms
+2014-06-25 05:54:45.158 itforum[2721:70b] active
+2014-06-25 05:54:45.189 itforum[2721:70b] Resetting plugins due to page load.
+2014-06-25 05:54:45.348 itforum[2721:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/D89BB770-CA0B-4224-A4D7-F6E80595A5BC/itforum.app/www/index.html
+2014-06-25 05:54:55.564 itforum[3157:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-25 05:54:55.571 itforum[3157:70b] Unlimited access to network resources
+2014-06-25 05:54:55.574 itforum[3157:70b] 
+
+Started backup to iCloud! Please be careful.
+Your application might rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines"
+You could find it at the following address https://developer.apple.com/icloud/documentation/data-storage/ .
+
+2014-06-25 05:54:55.594 itforum[3157:70b] [CDVTimer][splashscreen] 5.443990ms
+2014-06-25 05:54:55.595 itforum[3157:70b] [CDVTimer][TotalPluginStartup] 5.824029ms
+2014-06-25 05:54:55.598 itforum[3157:70b] active
+2014-06-25 05:54:55.669 itforum[3157:70b] Resetting plugins due to page load.
+2014-06-25 05:54:55.884 itforum[3157:70b] Finished load of: file:///Users/morten/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/D89BB770-CA0B-4224-A4D7-F6E80595A5BC/itforum.app/www/index.html

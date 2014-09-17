@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.itforum" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="wp-package" value="Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="wp-package" value="Notification" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="wp-package" value="InAppBrowser" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="wp-package" value="NetworkStatus" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="wp-package" value="SplashScreen" />
+    </feature>
+    <feature name="Sms">
+        <param name="wp-package" value="Sms" />
+    </feature>
+    <name>itforum</name>
+    <description>
+		A sample Apache Cordova application that responds to the deviceready event.
+	</description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+		Apache Cordova Team
+	</author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
