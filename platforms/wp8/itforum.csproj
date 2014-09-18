@@ -320,16 +320,10 @@
         <Content Include="www/js/detailpages.js~" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www/js/localDBParticipants.js" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="www/js/localDatabase.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/js/login.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/js/networking.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/js/remoteDatabase.js" />
