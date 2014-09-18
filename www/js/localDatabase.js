@@ -640,6 +640,12 @@ function displayParticipants(eventId) {
 
     function doDisplayParticipants(participantsArray){
 	$("#ParticipantsList").empty();
+	participantsArray.sort(function(a,b) {
+	    var result = a.firstname.localeCompare(b.firstname);
+	    if (result==0)
+		result = a.lastname.localeCompare(b.lastname);
+	    return result;
+	});
 	for (var i=0 ; i<participantsArray.length ; i++) {
 	    var imgSrc = participantsArray[i].imageurl==""?'img/person_icon.svg':participantsArray[i].imageurl;
 
@@ -717,6 +723,10 @@ $(document).on('pageshow', '#pageDetailEvent', function() {
 	});
     });
     // });
+});
+
+$(document).on('pageshow', '#pageParticipantsList', function() {
+    displayParticipants(sessionStorage.selectedId);
 });
 
 $(document).on('pagebeforeshow', '#pageParticipantsDetail', function() {

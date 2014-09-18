@@ -108,5 +108,25 @@ function ShowDialog(params) {
 	
 }
 
+/*
+ * Create date from string
+ */
+function createDateFromString(datestring, yearPos, monthPos, datePos) {
+    if (datestring == null)
+	return null;
+    if (yearPos == null)
+	yearPos = 0;
+    if (monthPos == null)
+	monthPos = 1;
+    if (datePos == null)
+	datePos = 2;
 
+    var arr = datestring.split(/[-\/]+/);
+    var year = parseInt(arr[yearPos], 10);
+    var month = parseInt(arr[monthPos], 10) - 1;
+    //month starting at 0-11
+    var date = parseInt(arr[datePos], 10);
+
+    return new Date(year, month, date, 15);
+};
 
