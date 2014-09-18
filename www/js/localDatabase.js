@@ -214,7 +214,6 @@ function onlyDate(time) {
 	var minutes = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
 	var formattedTime = hours + ":" + minutes;
 
-	formattedDate = "Dato: " + formattedDate;
 	return formattedDate;
 }
 
@@ -358,10 +357,27 @@ function displayEvents() {
     function doDisplayEvents(eventsArray) {
 	$('#eventList').empty();
 
+	eventsArray.sort(function(a,b) {
+	    var a_d = onlyDate(a.date.substring(6,19));
+	    var b_d = onlyDate(b.date.substring(6,19));
+	    var a_date = createDateFromString(a_d, 2, 1, 0);
+	    var b_date = createDateFromString(b_d, 2, 1, 0);
+	    return (a_date>b_date)-(a_date<b_date);
+	});
+
 	//$data.context.Events.forEach(function (Event) {
 	for (var i=0 ; i<eventsArray.length ; i++) {
 	    var currEvent=eventsArray[i];
-	    currEvent.date = onlyDate(currEvent.date.substring(6,19));
+	    
+	    /*var d = onlyDate(currEvent.date.substring(6,19));
+	    var event_date = createDateFromString(d, 2, 1, 0); 
+	    var today_date = new Date();
+
+	    if (event_date<today_date)
+		continue;
+		*/
+
+	    currEvent.date = "Dato: "+onlyDate(currEvent.date.substring(6,19));
 	    
 	    var imgSrc= currEvent.image!=""?currEvent.image:"img/imgArr.jpg";
 
@@ -467,6 +483,12 @@ function displayNetworkingParticipants() {
 
     function doDisplayNetworkingParticipants(participantsArray){
 	$("#NetworkingParticipantsList").empty();
+	participantsArray.sort(function(a,b) {
+	    var result = a.firstname.localeCompare(b.firstname);
+	    if (result==0)
+		result = a.lastname.localeCompare(b.lastname);
+	    return result;
+	});
 	for (var i=0 ; i<participantsArray.length ; i++) {
 	    // alert(participantsArray[i].linkedinurl);
 
@@ -682,8 +704,8 @@ $(document).on('pagebeforeshow', '#pageDetailEvent', function() {
 
 });
 
-$(document).on('pageshow', '#pageMenu', function() {
-    getNewEvents();
+$(document).on('pageshow', '#pageNetworking', function() {
+    displayNetworkingParticipants();
 });
 
 $(document).on('pageshow', '#pageDetailEvent', function() {
@@ -720,3 +742,11 @@ $(document).on('pagebeforeshow', '#pageMessages', function() {
 
 });
 
+
+$(document).on('pagebeforeshow', '#pageEventList', function() {
+    displayEvents();
+});
+
+$(document).on('pagebeforeshow', '#pageNetworking', function() {
+    displayNetworkingParticipants();
+});
