@@ -317,9 +317,6 @@
         <Content Include="www/js/detailpages.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www/js/detailpages.js~" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="www/js/localDatabase.js" />
     </ItemGroup>
     <ItemGroup>

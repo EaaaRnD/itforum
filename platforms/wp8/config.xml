@@ -18,6 +18,9 @@
     <feature name="Sms">
         <param name="wp-package" value="Sms" />
     </feature>
+    <feature name="Directions">
+        <param name="wp-package" value="Directions" />
+    </feature>
     <name>itforum</name>
     <description>
 		A sample Apache Cordova application that responds to the deviceready event.

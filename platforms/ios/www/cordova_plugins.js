@@ -51,17 +51,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/uk.co.ilee.directions/www/directions.js",
-        "id": "uk.co.ilee.directions.Directions",
-        "clobbers": [
-            "directions"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.plugin.sms/www/sms.js",
         "id": "org.apache.cordova.plugin.sms.Sms",
         "clobbers": [
             "window.sms"
+        ]
+    },
+    {
+        "file": "plugins/uk.co.ilee.directions/www/directions.js",
+        "id": "uk.co.ilee.directions.Directions",
+        "clobbers": [
+            "directions"
         ]
     }
 ];
@@ -74,8 +74,8 @@ module.exports.metadata =
     "org.apache.cordova.network-information": "0.2.8",
     "org.apache.cordova.splashscreen": "0.3.0",
     "org.jboss.aerogear.cordova.push": "0.5.0",
-    "uk.co.ilee.directions": "0.1.1",
-    "org.apache.cordova.plugin.sms": "0.1.0"
+    "org.apache.cordova.plugin.sms": "0.1.0",
+    "uk.co.ilee.directions": "0.1.1"
 }
 // BOTTOM OF METADATA
 });
