@@ -61,8 +61,6 @@ if (isMobile.any()) {
     });
 };
 
-$.event.special.swipe.durationThreshold = 2000;
-
 /*
  * Handle swipe right and back button as back action in app
  */
