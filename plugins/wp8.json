@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"Sms\"><param name=\"wp-package\" value=\"Sms\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Directions\"><param name=\"wp-package\" value=\"Directions\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -80,10 +84,10 @@
         "org.jboss.aerogear.cordova.push": {
             "PACKAGE_NAME": "{33308E31-9681-47A7-8122-F67504CE750C}"
         },
-        "uk.co.ilee.directions": {
+        "org.apache.cordova.plugin.sms": {
             "PACKAGE_NAME": "{33308E31-9681-47A7-8122-F67504CE750C}"
         },
-        "org.apache.cordova.plugin.sms": {
+        "uk.co.ilee.directions": {
             "PACKAGE_NAME": "{33308E31-9681-47A7-8122-F67504CE750C}"
         }
     },
