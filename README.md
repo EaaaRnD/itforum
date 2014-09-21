@@ -6,6 +6,8 @@ To login on the App member credentials received from the website are used.
 
 The software includes Android, iOS and Windows 8 projects. Project files are generated using Cordova/PhoneGap tools
 
+The app is developed by the R&D department at Business Academy Aarhus ( http://www.baaa.dk )
+
 ============
 
 The software is released under the MIT license:
