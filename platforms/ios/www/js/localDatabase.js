@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  * 
- * Copyright (c) <2004> <Business Academy Aarhus>
+ * Copyright (c) <2014> <Business Academy Aarhus>
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -34,44 +34,28 @@ function createLocalDatabase() {
      */
     $data.Entity.extend("Event", {
 	title : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	subtitle : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	date : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	location : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	type : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	description : {
-	    type : String,
-	    //required : true,
-	    maxLength : 20000
+	    type : String
 	},
 	url1 : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	url2 : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	eventId : {
 	    type : String,
@@ -79,62 +63,33 @@ function createLocalDatabase() {
 	    //computed : false
 	},
 	organiser : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	deadline : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	starttime : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
-	},
-	endtime : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	image : {
-	    type : String,
-	    //required : true,
-	    maxLength : 1000
+	    type : String
 	},
 	favorite : {
 	    type : "bool"
 	}
-	// lessons : {
-	// type : Array,
-	// elementType : String
-	//required : true,
-	//maxLength : 1000
-	// },
-	// IKKE ET ARRAY
-	// prices : {
-	// type : Array,
-	// elementType : String
-	//required : true,
-	//maxLength : 1000
-	// }
     });
 
     $data.Entity.extend("Participation", {
 	id : {
 	    type : "int",
 	    key : true,
-	    computed : true,
-	    maxLength : 40
+	    computed : true
 	},
 	participantId : {
-	    type : String,
-	    maxLength : 20
+	    type : String
 	},
 	eventId : {
-	    type : String,
-	    maxLength : 20
+	    type : String
 	}
     });
 
@@ -143,8 +98,7 @@ function createLocalDatabase() {
 	id : {
 	    type : String,
 	    key : true,
-	    computed : false,
-	    maxLength : 20
+	    computed : false
 	},
 	participations : {
 	    type : "Array",
@@ -152,44 +106,37 @@ function createLocalDatabase() {
 	    inverseProperty: "participant"
 	},
 	firstname : {
-	    type : String,
-	    maxLength : 40
+	    type : String
 	},
 	lastname : {
-	    type : String,
-	    maxLength : 40
+	    type : String
 	},
 	title : {
-	    type : String,
-	    maxLength : 40
+	    type : String
+	},
+	profile : {
+	    type : String
 	},
 	imageurl : {
-	    type : String,
-	    maxLength : 200
+	    type : String
 	},
 	email : {
-	    type : String,
-	    maxLength : 50
+	    type : String
 	},
 	mobile : {
-	    type : String,
-	    maxLength : 20
+	    type : String
 	},
 	linkedinurl : {
-	    type : String,
-	    maxLength : 200
+	    type : String
 	},
 	company : {
-	    type : String,
-	    maxLength : 40
+	    type : String
 	},
 	companyurl : {
-	    type : String,
-	    maxLength : 200
+	    type : String
 	},
 	companyimageurl : {
-	    type : String,
-	    maxLength : 200
+	    type : String
 	},
 	favorite : {
 	    type : "bool"
@@ -674,7 +621,7 @@ function displayParticipants(eventId) {
 	    var imgSrc = participantsArray[i].imageurl==""?'img/person_icon.svg':participantsArray[i].imageurl;
 
 	    var favorite = participantsArray[i].favorite==true;
-	    var theme = favorite?"b":"a";
+	    var theme = favorite?"c":"a";
 	    var icon = favorite?"star":"star-o";
 
 	    $('#ParticipantsList').append("<li data-theme='"+theme+"' data-icon='"+icon+"' data-id='" + participantsArray[i].id + "' ><a href='#pageParticipantsDetail'><img src='"+imgSrc+"'><p><strong>" + participantsArray[i].firstname + " " + participantsArray[i].lastname + "</strong></p><p> " + participantsArray[i].title + "</p><p>" + participantsArray[i].company + "</p><a href='javascript:setFavoriteParticipant("+participantsArray[i].id+","+!(participantsArray[i].favorite)+",function(){displayParticipants("+eventId+");})' data-theme='"+theme+"' data-rel='popup' data-position-to='window' data-transition='pop'>Stjernemarkering</a></li>");

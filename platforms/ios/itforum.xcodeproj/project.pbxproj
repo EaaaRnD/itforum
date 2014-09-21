@@ -28,6 +28,7 @@
 		312EC997075B4803BB67D914 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0AD6FD7386499E8B254F69 /* CDVConnection.m */; };
 		35E1AF0E6B0F4CF7A0E0ED15 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF01C71DDC4F7297B9E000 /* CDVInAppBrowser.m */; };
 		415CDDCA13864A3B8725FD53 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E27F77F48B747CA8FE96A84 /* CDVSplashScreen.m */; };
+		429B1B12B8C04572964EFA22 /* Sms.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC0F04586DD42F99862F3FB /* Sms.m */; };
 		5AB93B5D1951858900FE474C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB93B5C1951858900FE474C /* AudioToolbox.framework */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
@@ -52,7 +53,6 @@
 		EAE246B26ECD49B594B10D47 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E8824159A40B435381797F53 /* CDVReachability.m */; };
 		F4892A83DBED4DED995BF541 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE7EEECAB7E4223AB8DB627 /* CDVDevice.m */; };
 		F7956EF33CEE43A3BA2ABA76 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = D2019F94B15B42608ACBFDDA /* AppDelegate+notification.m */; };
-		429B1B12B8C04572964EFA22 /* Sms.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC0F04586DD42F99862F3FB /* Sms.m */; };
 		FF11C4C3E43848218777A28D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E07DC734DE407ABDD0B3B1 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -74,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05E07DC734DE407ABDD0B3B1 /* MessageUI.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0879FCAB9A6344F09763B582 /* CDVNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVNotification.h; path = org.apache.cordova.dialogs/CDVNotification.h; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		83E18471EEC444C0B10BF5C4 /* PushPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushPlugin.m; path = org.jboss.aerogear.cordova.push/PushPlugin.m; sourceTree = "<group>"; };
 		888B262D5497488D9BDA6B31 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* itforum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "itforum-Info.plist"; path = "../itforum-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9EC0F04586DD42F99862F3FB /* Sms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sms.m; path = org.apache.cordova.plugin.sms/Sms.m; sourceTree = "<group>"; };
 		A082139ED5514B06860DFE45 /* AGDeviceRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGDeviceRegistration.h; path = org.jboss.aerogear.cordova.push/AGDeviceRegistration.h; sourceTree = "<group>"; };
 		BAE7EEECAB7E4223AB8DB627 /* CDVDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = org.apache.cordova.device/CDVDevice.m; sourceTree = "<group>"; };
 		C0B2D450AEE64CD0AE70F5AA /* CDVNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVNotification.m; path = org.apache.cordova.dialogs/CDVNotification.m; sourceTree = "<group>"; };
@@ -140,12 +142,10 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		EE0AD6FD7386499E8B254F69 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
 		EF97B69C5ED44B8395C4B34A /* SystemConfiguration.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F08366F307674F78A49C7233 /* Sms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sms.h; path = org.apache.cordova.plugin.sms/Sms.h; sourceTree = "<group>"; };
 		F75817C8B3F04602A8C8F5EC /* libpush-sdk-0.9.0.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = "libpush-sdk-0.9.0.a"; path = "itforum/Plugins/org.jboss.aerogear.cordova.push/libpush-sdk-0.9.0.a"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = itforum/config.xml; sourceTree = "<group>"; };
 		FAE646A203504E45B60A5172 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDVNotification.bundle; sourceTree = "<group>"; };
-		9EC0F04586DD42F99862F3FB /* Sms.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Sms.m"; path = "org.apache.cordova.plugin.sms/Sms.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		F08366F307674F78A49C7233 /* Sms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Sms.h"; path = "org.apache.cordova.plugin.sms/Sms.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		05E07DC734DE407ABDD0B3B1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +394,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 510;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 24L5283M3X;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "itforum" */;
 			compatibilityVersion = "Xcode 3.2";

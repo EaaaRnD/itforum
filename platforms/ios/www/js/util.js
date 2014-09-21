@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  * 
- * Copyright (c) <2004> <Business Academy Aarhus>
+ * Copyright (c) <2014> <Business Academy Aarhus>
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -60,8 +60,6 @@ if (isMobile.any()) {
 	onStart();
     });
 };
-
-$.event.special.swipe.durationThreshold = 2000;
 
 /*
  * Handle swipe right and back button as back action in app

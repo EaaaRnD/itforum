@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  * 
- * Copyright (c) <2004> <Business Academy Aarhus>
+ * Copyright (c) <2014> <Business Academy Aarhus>
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -90,7 +90,7 @@ function displayEventDetails(events) {
                 }
             }
             if (participating == "false") {
-                $("#pageDetailEvent #eventAttributes").append("<a href=\"javascript:window.open('" + event.url2 + "&guid=" + login + "','_blank','location=no')\" class='ui-btn'>Deltag i arrangementet</a>");
+                $("#pageDetailEvent #eventAttributes").append("<a href=\"javascript:window.arrangementInAppBrowser = window.open('" + event.url2 + "&guid=" + login + "','_blank','location=no'); window.arrangementInAppBrowser.addEventListener('exit', reLogin);\" class='ui-btn'>Deltag i arrangementet</a>");
             }
             
         } else {
@@ -151,7 +151,7 @@ function ProfileDetails() {
     // $("#pageUser #userAttributes").append("<table><tr><td><img src='" + us.companyimageurl + "'></td></tr></table>");
     // }
     if (us.profile != ""){
-        $("#pageUser #userAttributes").append("<table><tr><td><h3>Profiltekst:</h3></td><td><p id='userProfileText'> " + us.profile + "</p></h3></td></tr></table>");
+        $("#pageUser #userAttributes").append("<table><tr><td><h3>Profil:</h3></td></tr><tr><td><p id='userProfileText'> " + us.profile + "</p></h3></td></tr></table>");
     }
     
     if(us.mobile != ""){
@@ -207,15 +207,12 @@ function displayParticipantDetails() {
 	$("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Firma:</h3></td><td><h3 id='userTitle'>" + participant.company + "</h3></td></tr></table>");
 
 	if (participant.profile) {
-	    $("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Profiltekst:</h3></td><td><p id='userProfileText'> " + participant.profile + "</p></h3></td></tr></table>");
+	    $("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Profil:</h3></td></tr><tr><td><p id='userProfileText'> " + participant.profile + "</p></h3></td></tr></table>");
 	}
 
 	if (participant.mobile) {
 	    var smsHref;
-	    if (isMobile.Android) {
-		//sessionStorage.SmsDestination = participant.mobile;
-		//$("#SmsRecipient").html(participant.firstname+" "+participant.lastname);
-		//smsHref = "#pageWriteSms";
+	    if (isMobile.Android()) {
 		smsHref = 'javascript:sendSms('+participant.mobile+')';
 	    } else {
 		smsHref = "sms:"+participant.mobile;

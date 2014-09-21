@@ -10,22 +10,26 @@
 	<string>itforum</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>08D95C80CECA9E749AB9721B2ED43B3B53801301</key>
+		<string>https://github.com/EaaaRnD/itforum.git</string>
 		<key>AC84118F-C43E-448F-A06A-9FCAB4094B31</key>
 		<string>ssh://tranebaerkaeret.dk/it_forum_development</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Frontend/NativeApp/platforms/ios/itforum.xcodeproj/project.xcworkspace</string>
+	<string>platforms/ios/itforum.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>08D95C80CECA9E749AB9721B2ED43B3B53801301</key>
+		<string>../../../..</string>
 		<key>AC84118F-C43E-448F-A06A-9FCAB4094B31</key>
-		<string>../../../../../..</string>
+		<string>../../../../../it_forum_development</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://tranebaerkaeret.dk/it_forum_development</string>
+	<string>https://github.com/EaaaRnD/itforum.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AC84118F-C43E-448F-A06A-9FCAB4094B31</string>
+	<string>08D95C80CECA9E749AB9721B2ED43B3B53801301</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>AC84118F-C43E-448F-A06A-9FCAB4094B31</string>
 			<key>IDESourceControlWCCName</key>
 			<string>it_forum_development</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>08D95C80CECA9E749AB9721B2ED43B3B53801301</string>
+			<key>IDESourceControlWCCName</key>
+			<string>itforum</string>
 		</dict>
 	</array>
 </dict>
