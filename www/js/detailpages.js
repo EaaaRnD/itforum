@@ -151,7 +151,7 @@ function ProfileDetails() {
     // $("#pageUser #userAttributes").append("<table><tr><td><img src='" + us.companyimageurl + "'></td></tr></table>");
     // }
     if (us.profile != ""){
-        $("#pageUser #userAttributes").append("<table><tr><td><h3>Profiltekst:</h3></td><td><p id='userProfileText'> " + us.profile + "</p></h3></td></tr></table>");
+        $("#pageUser #userAttributes").append("<table><tr><td><h3>Profil:</h3></td></tr><tr><td><p id='userProfileText'> " + us.profile + "</p></h3></td></tr></table>");
     }
     
     if(us.mobile != ""){
@@ -207,7 +207,7 @@ function displayParticipantDetails() {
 	$("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Firma:</h3></td><td><h3 id='userTitle'>" + participant.company + "</h3></td></tr></table>");
 
 	if (participant.profile) {
-	    $("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Profiltekst:</h3></td><td><p id='userProfileText'> " + participant.profile + "</p></h3></td></tr></table>");
+	    $("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Profil:</h3></td></tr><tr><td><p id='userProfileText'> " + participant.profile + "</p></h3></td></tr></table>");
 	}
 
 	if (participant.mobile) {
