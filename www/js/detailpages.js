@@ -212,10 +212,7 @@ function displayParticipantDetails() {
 
 	if (participant.mobile) {
 	    var smsHref;
-	    if (isMobile.Android) {
-		//sessionStorage.SmsDestination = participant.mobile;
-		//$("#SmsRecipient").html(participant.firstname+" "+participant.lastname);
-		//smsHref = "#pageWriteSms";
+	    if (isMobile.Android()) {
 		smsHref = 'javascript:sendSms('+participant.mobile+')';
 	    } else {
 		smsHref = "sms:"+participant.mobile;
