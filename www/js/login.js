@@ -27,16 +27,21 @@ var password;
 
 checkLogin();
 sessionStorage.loggedInNotAutoLoggedIn == null;
-function getChallenge() {
+function getChallenge(callback) {
+    var username = window.localStorage.getItem("username");
+    var password = window.localStorage.getItem("password");
+
 	$.ajax({
-		url : "http://www.itforum.dk/ws/appapi.asp?method=getchallenge&login=" + window.localStorage.getItem("username") + "",
+		url : "http://www.itforum.dk/ws/appapi.asp?method=getchallenge&login=" + username + "",
 		dataType : "jsonp",
 		success : function(parsed_json) {
-			var hash = CryptoJS.SHA1(parsed_json.challenge + CryptoJS.SHA1(window.localStorage.getItem("username") + "" + window.localStorage.getItem("password")));
-			login(hash);
+			var hash = CryptoJS.SHA1(parsed_json.challenge + CryptoJS.SHA1(window.localStorage.getItem("username") + "" + password));
+			login(hash, callback);
 		},
 		error : function() {
 			alert('failure to access challenge');
+		    if (typeof callback == "function")
+			callback();
 		}
 	});
 
@@ -55,7 +60,7 @@ function logoutCredentials() {
     window.localStorage.setItem("username", "");
 }
 
-function login(hash) {
+function login(hash, callback) {
 	$.ajax({
 		url : "http://www.itforum.dk/ws/appapi.asp?method=login&response=" + hash + "",
 		dataType : "jsonp",
@@ -63,22 +68,14 @@ function login(hash) {
 			window.localStorage.setItem("profile", parsed_json.loginguid);
 			window.localStorage.setItem("user", JSON.stringify(parsed_json));
 			var user = JSON.parse(window.localStorage.getItem("user"));
-			
-			checkLogin();
-
-			if (window.localStorage.getItem("profile") != "loggedOut" || window.localStorage.getItem("profile") === null) {
-				$.mobile.navigate("#pageMenu");
-				document.getElementById('username').value = '';
-				document.getElementById('password').value = '';
-				$('#loginError').html("");
-
-			} else {
-				$('#loginError').html("Email eller kodeord er forkert");
-			}
+		    if (typeof callback == "function")
+			callback();
 		},
 		error : function() {
 			$('#loginError').html("Email eller kodeord er forkert");
 			alert('failure to access login');
+		    if (typeof callback == "function")
+			callback();
 		}
 	});
 }
@@ -116,26 +113,42 @@ function checkLogin() {
 	}
 }
 
-
-$('#loginBtn').on("click", function() {
-	if ($('#username').val() == "" || $('#password').val() == "") {
-		$('#loginError').html("Email eller kodeord mangler");
-	} else {
-		window.localStorage.setItem("username", $('#username').val());
-		window.localStorage.setItem("password", $('#password').val());
-
-		if (document.getElementById("autologincheckbox").checked) {
-
-			window.localStorage.setItem("autologincheckbox", "checked");
-		} else {
-
-			window.localStorage.setItem("autologincheckbox", "NotChecked");
-			sessionStorage.loggedInNotAutoLoggedIn = "loggedIn";
-		}
-
-		getChallenge();
-	}
+function reLogin(callback) {
+    getChallenge(function() {
 	getNewEvents();
+	if (typeof callback == "function")
+	    callback();
+    });
+}
+
+$('#loginBtn').on("click", function(){
+    if ($('#username').val() == "" || $('#password').val() == "") {
+	$('#loginError').html("Email eller kodeord mangler");
+    } else {
+	window.localStorage.setItem("username", $('#username').val());
+	window.localStorage.setItem("password", $('#password').val());
+	
+	if (document.getElementById("autologincheckbox").checked) {
+	    window.localStorage.setItem("autologincheckbox", "checked");
+	} else {
+	    window.localStorage.setItem("autologincheckbox", "NotChecked");
+	    sessionStorage.loggedInNotAutoLoggedIn = "loggedIn";
+	}
+
+	reLogin(function() {
+	    checkLogin();
+
+	    if (window.localStorage.getItem("profile") != "loggedOut" || window.localStorage.getItem("profile") === null) {
+		$.mobile.navigate("#pageMenu");
+		document.getElementById('username').value = '';
+		document.getElementById('password').value = '';
+		$('#loginError').html("");
+
+	    } else {
+		$('#loginError').html("Email eller kodeord er forkert");
+	    }
+	});
+    }
 });
 
 $('#logoutBtn').on("click", function() {

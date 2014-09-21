@@ -90,7 +90,7 @@ function displayEventDetails(events) {
                 }
             }
             if (participating == "false") {
-                $("#pageDetailEvent #eventAttributes").append("<a href=\"javascript:window.open('" + event.url2 + "&guid=" + login + "','_blank','location=no')\" class='ui-btn'>Deltag i arrangementet</a>");
+                $("#pageDetailEvent #eventAttributes").append("<a href=\"javascript:window.arrangementInAppBrowser = window.open('" + event.url2 + "&guid=" + login + "','_blank','location=no'); window.arrangementInAppBrowser.addEventListener('exit', reLogin);\" class='ui-btn'>Deltag i arrangementet</a>");
             }
             
         } else {
