@@ -212,10 +212,10 @@ function displayParticipantDetails() {
 
 	if (participant.mobile) {
 	    var smsHref;
-	    if (isMobile.Android()) {
-		smsHref = 'javascript:sendSms('+participant.mobile+')';
-	    } else {
+	    if (isMobile.iOS()) {
 		smsHref = "sms:"+participant.mobile;
+	    } else {
+		smsHref = 'javascript:sendSms('+participant.mobile+')';
 	    }
 
 	    $("#pageParticipantsDetail #userAttributes").append("<table><tr><td><h3>Mobiltelefon:</h3></td><td><p id='userMobileNo'> " + participant.mobile + "</p></td></tr></table>");
